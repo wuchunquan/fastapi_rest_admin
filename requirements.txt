@@ -1,0 +1,8 @@
+fastapi[all]
+uvicorn
+sqlalchemy
+sqlalchemy_utils
+pymongo
+redis
+psycopg2
+jurigged
