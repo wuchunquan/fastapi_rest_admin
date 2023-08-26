@@ -1,3 +1,9 @@
+try:
+    from utils.print_utils import hook_print
+
+    hook_print()
+except Exception as e:
+    raise e
 import os.path
 from pathlib import Path
 import uvicorn
@@ -35,11 +41,14 @@ def init_app():
         allow_headers=["*"],
     )
     app.router.prefix = f"/{sys_name}"
-    print(f"接口文档链接:  http://127.0.0.1:{conf.app.port}{app.docs_url}")
+    help.print(f"接口文档链接:  http://127.0.0.1:{conf.app.port}{app.docs_url}")
     return app
 
 
 app = init_app()
+
+
+
 
 if __name__ == '__main__':
     uvicorn.run(app, log_config=uvicorn_log_config, host="0.0.0.0", port=conf.app.port)

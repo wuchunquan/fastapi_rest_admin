@@ -32,7 +32,7 @@ def start_watch(ex_path=['venv']):
         return filename
 
     watch(pattern=watch_pattern)
-
+    print("热更新开启")
 
 start_watch(['venv'])
 if __name__ == '__main__':

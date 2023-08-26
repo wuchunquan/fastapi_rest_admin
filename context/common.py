@@ -16,6 +16,7 @@ redis_pool.connect()
 # mongodb
 mg_db = MongoConnect(**conf.mongo)
 
+
 class ctx:
     conf = conf
     common_db = common_db

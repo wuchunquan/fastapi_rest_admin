@@ -78,5 +78,4 @@ def class_to_dict(class_obj):
                 class_dict[key] = class_to_dict(value)
             else:
                 class_dict[key] = value
-    print(class_dict)
     return class_dict
